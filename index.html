@@ -1,0 +1,311 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Sistem Pakar Kelapa Sawit</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-green-600 text-white py-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold">Sistem Pakar Kelapa Sawit</h1>
+            <p class="text-lg">Diagnosis Gejala Penyakit dan Hama serta Cara Penanganannya pada Tanaman Kelapa Sawit</p>
+        </div>
+    </header>
+    <nav class="bg-gray-800 text-white">
+        <div class="container mx-auto flex justify-center space-x-4 py-2">
+            <a class="hover:bg-gray-700 px-3 py-2 rounded" href="#diagnosis">Diagnosis</a>
+            <a class="hover:bg-gray-700 px-3 py-2 rounded" href="#penyakit">Penyakit</a>
+            <a class="hover:bg-gray-700 px-3 py-2 rounded" href="#hama">Hama</a>
+            <a class="hover:bg-gray-700 px-3 py-2 rounded" href="#penanganan">Penanganan</a>
+        </div>
+    </nav>
+    <div class="container mx-auto my-8">
+        <section class="mb-8" id="diagnosis">
+            <h2 class="text-2xl font-bold text-center mb-4">Diagnosis Gejala</h2>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <form id="diagnosisForm">
+                    <div class="mb-4">
+                        <label class="block text-blue-700 text-sm font-bold mb-2" for="gejala">Masukkan Gejala:</label>
+                        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="gejala" name="gejala" placeholder="Deskripsikan gejala yang dialami tanaman kelapa sawit" rows="2"></textarea>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button class="bg-blue-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" id="submitBtn" type="button">Diagnosis</button>
+                    </div>
+                </form>
+            </div>
+            <div class="mt-8" id="result"></div>
+        </section>
+        <section class="mb-8" id="penyakit">
+            <h2 class="text-2xl font-bold text-center mb-4">Penyakit</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img alt="Oil palm tree affected by Ganoderma disease showing wilting and yellowing leaves" class="w-full h-48 object-cover" height="400" src="ganoderma.jpeg" width="600"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Penyakit 1: Ganoderma</h3>
+                        <p class="text-gray-700">Ganoderma adalah penyakit yang disebabkan oleh jamur Ganoderma boninense yang menyebabkan layu dan menguningnya daun kelapa sawit.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img alt="Oil palm tree affected by Busuk Kuncup (Spear Rot) showing yellowing and wilting leaves" class="w-full h-48 object-cover" height="400" src="Spear Rot.jpeg" width="600"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Penyakit 2: Busuk Kuncup (Spear Rot)</h3>
+                        <p class="text-gray-700">Penyakit busuk pucuk pada tanaman kelapa sawit disebabkan oleh beberapa faktor, terutama infeksi jamur. Jamur yang umum terlibat dalam penyakit ini adalah Phytophthora palmivora dan Erwinia sp.. Penyakit ini biasanya menyerang pucuk tanaman, menyebabkan jaringan membusuk dan mengganggu pertumbuhan.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img alt="Oil palm tree affected by Penyakit akar (blast disease) disease showing dark lesions on leaves" class="w-full h-48 object-cover" height="400" src="blast disease.jpeg" width="600"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Penyakit 3: Penyakit akar (blast disease)</h3>
+                        <p class="text-gray-700">Penyakit akar (blast disease) pada tanaman kelapa sawit disebabkan oleh infeksi jamur, terutama oleh spesies jamur dari genus Rhizoctonia dan Pythium. Penyakit ini dapat menyebabkan kerusakan serius pada sistem akar tanaman, yang berdampak pada pertumbuhan dan produktivitas kelapa sawit. Berikut adalah beberapa penyebab utama penyakit akar ini.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img alt="Oil palm tree affected by Penyakit Garis Kuning (Patch Yellow) disease showing dark lesions on leaves" class="w-full h-48 object-cover" height="400" src="Patch Yellow.jpeg" width="600"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Penyakit 4: Penyakit Garis Kuning (Patch Yellow)</h3>
+                        <p class="text-gray-700">Penyakit Garis Kuning (Patch Yellow) pada tanaman kelapa sawit disebabkan oleh infeksi jamur, khususnya Fusarium oxysporum.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img alt="Oil palm tree affected by Anthracnose disease showing dark lesions on leaves" class="w-full h-48 object-cover" height="400" src="Penyakit Anthracnose.jpeg" width="600"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Penyakit 5: Penyakit Anthracnose</h3>
+                        <p class="text-gray-700">Penyakit Anthracnose pada tanaman kelapa sawit disebabkan oleh jamur Melanconium sp., Glomerella cingulata, dan Botryodiplodia palmarum, mengakibatkan bercak cokelat pada daun dan dapat menyebabkan kematian tanaman.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img alt="Oil palm tree affected by Penyakit Tajuk (Crown Disease) disease showing dark lesions on leaves" class="w-full h-48 object-cover" height="400" src="Crown Disease.jpeg" width="600"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Penyakit 6: Penyakit Tajuk (Crown Disease)</h3>
+                        <p class="text-gray-700">Penyakit tajuk (crown disease) pada tanaman kelapa sawit umumnya disebabkan oleh infeksi jamur, terutama oleh spesies dari genus Fusarium, seperti Fusarium oxysporum. Penyakit ini dapat menyebabkan kerusakan serius pada bagian tajuk tanaman, yang berdampak pada pertumbuhan dan produktivitas kelapa sawit.</p>
+                    </div>
+            </div>
+        </section>
+        <section class="mb-8" id="hama">
+            <h2 class="text-2xl font-bold text-center mb-4">Hama</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img alt="Close-up of rhinoceros beetle on oil palm tree" class="w-full h-48 object-cover" height="400" src="Kumbangtanduk.jpeg" width="600"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Hama 1: Kumbang Tanduk</h3>
+                        <p class="text-gray-700">Kumbang tanduk adalah hama yang menyerang batang kelapa sawit dan dapat menyebabkan kerusakan serius pada tanaman.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img alt="Close-up of bagworm on oil palm tree" class="w-full h-48 object-cover" height="400" src="ulatkantong.jpeg" width="600"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Hama 2: Ulat Kantong</h3>
+                        <p class="text-gray-700">Ulat kantong adalah hama yang menyerang daun kelapa sawit dan dapat menyebabkan defoliasi yang parah.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img alt="Close-up of red palm weevil on oil palm tree" class="w-full h-48 object-cover" height="400" src="kumbangmerah.jpeg" width="600"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Hama 3: Kumbang Merah</h3>
+                        <p class="text-gray-700">Kumbang merah adalah hama yang menyerang batang kelapa sawit dan dapat menyebabkan kematian tanaman.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img alt="Close-up of red palm weevil on oil palm tree" class="w-full h-48 object-cover" height="400" src="ulatapi.jpeg" width="600"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Hama 4: Ulat Api (Setora nitens)</h3>
+                        <p class="text-gray-700">Ulat api adalah hama pada tanaman kelapa sawit, ulat ini mengikis daun kelapa sawit, meninggalkan bekas yang terlihat seperti jendela pada helaian daun. Serangan berat dapat menyebabkan kehilangan daun hingga 90%.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img alt="Close-up of red palm weevil on oil palm tree" class="w-full h-48 object-cover" height="400" src="Tirathaba mundella.jpeg" width="600"/>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Hama 5: Penggerek Tandan Buah (Tirathaba mundella)</h3>
+                        <p class="text-gray-700">Hama ini menyerang tanaman kelapa sawit dengan cara meletakkan telur di tandan buah. Telur tersebut kemudian menetas menjadi larva atau ulat yang akan menggerek dan membuat lubang pada buah dan bunga sawit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>© 2024 Kelapa Sawit Indonesia. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            const gejala = document.getElementById('gejala').value;
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '<p class="text-center text-lg font-bold">Hasil Diagnosis:</p>';
+            let results = [];
+
+            // Database gejala, penyakit, hama, dan pengobatan
+            const symptomsDatabase = {
+                'daun menguning': [
+                    {
+                        disease: "Terjangkit Jamur Ganoderma",
+                        handling: "Melakukan pemangkasan pelepah kering dan menghilangkan bagian tanaman yang terinfeksi atau Menggunakan racun untuk mempercepat pengendalian pada tunggul-tunggul yang terinfeksi."
+                    },
+                    {
+                        disease: "Terjangkit hama Kutu daun",
+                        handling: "Menggunakan predator alami seperti serangga pemangsa yang dapat mengurangi populasi kutu daun. Contohnya adalah penggunaan ladybug atau parasitoid yang dapat menyerang kutu daun atau dengan menggunakan insektisida yang dapat digunakan adalah Alika 247 ZC, yang merupakan insektisida racun kontak dan lambung"
+                    },
+                    {
+                        disease: "Terjangkit hama Pengerek Tandan Buah",
+                        handling: "Menggunakan insektisida yang dapat digunakan adalah Alika 247"
+                    },
+                    {
+                        disease: "Terjangkit hama Ulat Api",
+                        handling: "Menggunakan insektisida yang dapat digunakan adalah Alika 247"
+                    }
+                ],
+                'pucuk daun busuk': [
+                    {
+                        disease: 'Serangan Jamur Erwinia sp ini dapat menyebabkan pembusukan pada pucuk dan tunas tanaman kelapa sawit, mengakibatkan kerusakan yang signifikan',
+                        handling: 'Segera memusnahkan tanaman yang terinfeksi untuk mencegah penyebaran lebih lanjut ke tanaman sehat di sekitarnya atau Menggunakan fungisida sistemik yang efektif, seperti binomil, untuk mengendalikan infeksi jamur. Pastikan untuk mengikuti dosis yang dianjurkan.'
+                    },
+                    {
+                        disease: 'Penyakit ini disebabkan oleh bakteri Xanthomonas ax',
+                        handling: 'Menggunakan fungisida sistemik yang efektif, seperti binomil'
+                    },
+                    {
+                        disease: 'Keberadaan tanaman inang seperti pisang di sekitar area perkebunan dapat menjadi sumber inokulum bagi Fusarium sp',
+                        handling: 'Menghilangkan atau membasmi tanaman inang seperti pohon pisang di area perkebunan kelapa sawit'
+                    }
+                ],
+                'pertumbuhan terhambat': [
+                    {
+                        disease: 'Hama atau Kondisi Tanah yang Buruk',
+                        handling: 'Periksa kondisi tanah dan gunakan pestisida yang sesuai.'
+                    }
+                ],
+                'daun coklat': [
+                    {
+                        disease: 'Penyakit Jamur',
+                        description: 'Gejala: Daun berwarna coklat dan kering.',
+                        handling: 'Gunakan fungisida dan perbaiki sirkulasi udara.'
+                    }
+                ],
+                'busuk daun ': [
+                    {
+                        disease: 'Spear Rot',
+                        description: 'Gejala: Daun daun busuk jaringan pada kuncup membusuk dan berwarna kecokelat-cokelatan.',
+                        handling: 'Gunakan Cara pengendalian yang dapat dilakukan, mulai dari melakukan sensus terhadap pohon yang mengalami spear rot, hingga aplikasi pupuk boron cair.'
+                    }
+                ],
+                'akar busuk': [
+                    {
+                        disease: 'Penyakit Akar Busuk',
+                        description: 'Gejala: Akar tanaman membusuk dan tanaman layu.',
+                        handling: 'Kurangi penyiraman dan gunakan fungisida.'
+                    }
+                ],
+                'busuk pangkal': [
+                    {
+                        disease: 'Penyakit Busuk pangkal',
+                        description: 'Gejala: daun berwarna pucat, menguning, akar mengalami rapuh.',
+                        handling: 'Pembumbunan tanah timbun pangkal batang kelapa sawit dengan tanah untuk mencegah infestasi basidiospora ke batang kelapa sawit, Pembuatan parit buat parit di sekeliling tanaman yang terserang penyakit ganoderma.'
+                    }
+                ],
+                'busuk tandan': [
+                    {
+                        disease: 'Penyakit Busuk Tandan (Jamur Marasmius palmivorus)',
+                        description: 'Gejala: Buah Mengalami Kebusukan sebelum matang pada bagian buah.',
+                        handling: 'Pembuangan buah busuk buang buah yang terinfeksi atau busuk dari pohon untuk mencegah penyebaran infeks, Pengendalian hayati Gunakan pengendali hayati seperti CHIPS sebagai vaksin yang ramah lingkungan.'
+                    }
+                ],
+                'karat merah': [
+                    {
+                        disease: 'Penyakit karat daun pada kelapa sawit disebabkan oleh alga Cephaleuros virescens',
+                        description: 'Gejala : Penyakit bercak daun, yang disebabkan oleh jamur (Curvularia spp).',
+                        handling: 'Untuk mencegah Melakukan rotasi tanaman untuk mengurangi risiko infeksi, menggunakan benih yang bebas dari penyakit.'
+                    }
+                ],
+                'jamur upas': [
+                    {
+                        disease: 'Penyakit jamur upas',
+                        description: 'Penyakit ini disebabkan oleh aktivitas pathogen dari kelompok jamur basidiomycetes yaitu Upasia Salmonicolor pada tanaman.',
+                        handling: 'Jamur upas dapat dicegah dengan menanam klon tahan jamur dan mengatur jarak tanam agar kebun tidak lembap.'
+                    }
+                ],
+                'ulat api': [
+                    {
+                        disease: 'Hama Ulat Api',
+                        description: 'Serangan ulat api pada tanaman kelapa sawit ditandai dengan daun yang habis dengan cepat dan berbentuk seperti melidi. Gejala ini dimulai dari daun bagian bawah hingga helaian daun berlubang habis.',
+                        handling: 'Insektisida kimia sintetis yang mengandung bahan aktif piretroid, seperti deltametrin dan sipermetrin, dapat digunakan untuk menekan populasi ulat api.'
+                    }
+                ],
+                'kumbang tanduk': [
+                    {
+                        disease: 'Hama Kumbang Tanduk',
+                        description: 'Gejala serangan kumbang tanduk pada kelapa sawit yaitu Daun muda yang baru terbuka tampak seperti terpotong-potong atau bergunting-gunting, menyerupai huruf "V", pupus berwarna kecoklatan.',
+                        handling: 'Untuk mengendalikan hama kumbang tanduk, Anda dapat melakukan berbagai cara yaitu dengan Menggunakan garam kasar sebanyak 200 gram per tanaman di pucuk pohon, Mengutip kumbang secara manual.'
+                    }
+                ],
+                'tikus': [
+                    {
+                        disease: 'Hama tikus',
+                        description: 'Pada Tanaman Belum Menghasilkan (TBM) serangan tikus ditandai dengan adanya bekas keratan pada pangkal pelepah daun hingga titik tumbuh tanaman yang muda, yang mengakibatkan terhambatnya pertumbuhan bahkan kematian pada tanaman.',
+                        handling: 'Kultur teknis Pengaturan jarak tanam, bertujuan agar tajuk kelapa sawit tidak saling bersentuhan antara pohon yang satu dengan pohon yang lain, sehingga dapat menghambat pergerakan tikus antar pohon.'
+                    },
+                    {
+                        disease: 'Pada Tanaman Menghasilkan (TM), tikus memakan buah, bunga, dan pucuk tanaman sehingga menyebabkan kehilangan hasil baik secara kuantitatif maupun kualitatif.',
+                        handling: 'Sanitasi Menjaga kebersihan kebun dari tumpukan daun-daun tua kelapa sawit, serta mengelola gulma dengan baik. Membuang/memotong bunga jantan (melakukan kastrasi) dan membersihkan ketiak pelepah.'
+                    }
+                ],
+                'rayap': [
+                    {
+                        disease: 'Keberadaan rayap berawal dari pembukaan lahan yang kurang bersih sehingga ketika lahan ditanami kelapa sawit rayap menjadi hama yang sangat merusak',
+                        description: 'Rayap menyerang kelapa sawit dari dalam tanah langsung mengebor bagian tengah pangkal batang hingga terbentuk rongga dan bersarang di dalamnya.',
+                        handling: 'Sanitasi dilakukan dengan cara membongkar tanaman pada tanaman belum menghasilkan (TBM) dan mengupas batang atau sisa pelepah terserang dengan menggunakan dodos pada tanaman menghasilkan (TM). Selanjutnya, tim penyemprot mengaplikasikan termisida pada batang yang telah dikupas.'
+                    }
+                ],
+                'nematoda': [
+                    {
+                        disease: 'Nematoda dapat menyerang akar tanaman kelapa sawit.',
+                        description: 'Ciri fisik tanaman kelapa sawit yang terserang oleh parasit Nematoda bisa dilihat pada perubahan fisik tanaman yang mirip dengan serangan jenis hama lainnya. Misalnya pertumbuhan tanaman yang terhambat sehingga tanaman menjadi kerdil dan warna daun menguning bahkan mengering (seperti terbakar).',
+                        handling: 'Metode umum yang biasanya dilakukan oleh para petani dalam mengendalikan serangan parasit Nematoda Melakukan penerapan pola tumpang sari atau polikultur, Meningkatkan sanitasi pada area tanaman yang pernah terinfeksi.'
+                    }
+                ],
+                'monyet': [
+                    {
+                        disease: 'Hama Monyet',
+                        description: 'Satu penyebab menyerangnya monyet tersebut bisa dikarenakan disekitaran kebun masih banyaknya pohon-pohon tinggi dan dekat dengan hutan sehingga monyet-monyet tersebut dapat dengan mudah memasuki areal tanaman kelapa sawit karena dekat dengan habitatnya dan tersedianya makanan.',
+                        handling: 'Memanfaatkan kotoran ayam sebagai pelindung ladang dengan menaburkan kotoran ayam yang masih basah di jalur yang biasa dilalui oleh kawanan monyet.'
+                    }
+                ]
+            };
+
+            // periksa gejala di input
+            for (const symptom in symptomsDatabase) {
+                if (gejala.toLowerCase().includes(symptom)) {
+                    symptomsDatabase[symptom].forEach(item => {
+                        results.push(`
+                            <div class="bg-white rounded-lg shadow-md p-4 mt-4">
+                                <h3 class="text-xl font-bold mb-2">Gejala: ${symptom.charAt(0).toUpperCase() + symptom.slice(1)}</h3>
+                                <p class="text-gray-700">Kemungkinan Penyakit: ${item.disease}</p>
+                                ${item.description ? `<p class="text-gray-700">Gejala yang Ditimbulkan: ${item.description}</p>` : ''}
+                                <p class="text-gray-700">Penanganan: ${item.handling}</p>
+                            </div>
+                        `);
+                    });
+                }
+            }
+
+            // Jika hasilnya ditemukan, tampilkan; jika tidak, tampilkan pesan gejala yang tidak diketahui
+            if (results.length > 0) {
+                resultDiv.innerHTML += results.join('');
+            } else {
+                resultDiv.innerHTML += `
+                    <div class="bg-white rounded-lg shadow-md p-4 mt-4">
+                        <h3 class="text-xl font-bold mb-2">Gejala Tidak Dikenali</h3>
+                        <p class="text-gray-700">Silakan konsultasikan dengan ahli pertanian untuk diagnosis lebih lanjut.</p>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>
